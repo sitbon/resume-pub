@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+\include{cv-commands}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}  % Goodbye, hyphens!
+
+%\setleftmargin{1.8cm}
+%\setrightmargin{1.8cm}
+%\settopmargin{1.0cm}
+%\setbottommargin{1.0cm}
+
+%\newcommand{\ispace}{\hspace*{2mm}}
+\newcommand{\ispace}{\hspace*{0mm}}
+
+% Title, date, left1, left2, right1, right2
+\newcommand{\basicitem}[6]{
+	{\bfseries #1}\hfill{\bfseries #2}
+  \\*[-1mm]{\scriptsize #3\hfill{#5}}
+	\\*[-1.5mm]{\scriptsize #4\hfill{#6}}
+}
+\newcommand{\pubitem}[4]{
+	{\bfseries \footnotesize{#1}}\hfill{\bfseries \scriptsize{#2}}
+	\\\hspace*{0.25in}#3\\\hspace*{0.25in}#4\\[1.0mm]
+}
+
+\newcommand{\skillitem}[1]{
+	{\bfseries \footnotesize{#1}}\\
+}
+\newcommand{\skillsubitem}[1]{
+	\ispace{\scriptsize $\bullet$} #1\\[0.4mm]
+}
+
+\newcommand{\refitem}[3]{
+	{\bfseries \footnotesize{#1}}\hfill{\bfseries \scriptsize{#2}}
+	\\\ispace#3\\[1.5mm]
+}
+
+\setlength{\parindent}{0.0in}
+%\setlength{\parskip}{-4mm}
+
+\usepackage[shortlabels]{enumitem}
+
+\newcommand{\startresumeitemskillslist}{
+	\begin{itemize}[nosep,leftmargin=0.8cm,rightmargin=0.65cm]
+}
+\newcommand{\finishresumeitemskillslist}{
+	\end{itemize}\vspace{1.5em}
+}
+
+\begin{document}
+\setmainfont
+\header
+{\Huge{Phillip Jacques Sitbon}\\
+{\small ~~~~~~~~~~~~~~~~~~~~~phillip.sitbon@example.com}}
+{\tiny {\tiny {\tiny I am a passionate, multi-talented engineer and innovator with 25 years of experience,\\[-0.08in]
+	20 years of working with \& loving Python, and 18 years of tech industry experience.}}}
+{{XXXX~SE~Xxxx~St.\\Portland,~OR~~00000}\\
+\smcp{(503) 000 0000}\\
+%\vspace{2em}
+%\vspace{-8em}
+{~}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{resumeblock}{Industry Experience}
+
+\resumeitemshort
+{Python Developer \& Expert Consultant}
+{2022{\tiny{.11}} -- 2024{\tiny{.07}}}
+{International Space Station (Remote)}
+{NASA}
+{Example Engineering Team}
+{William Shakespeare}
+{1@example.com}\\[-0.1in]
+
+\startresumeitemskillslist
+\item{Developed, deployed, and managed production services following Scaled Agile Framework (SAFe) principles.}
+\item{(More bullet points)}
+
+\finishresumeitemskillslist
+\resumeitemshort
+{Senior Systems \& Machine Learning Engineer}
+{2012{\tiny{.01}} -- 2020{\tiny{.12}}}
+{Hillsboro, OR}
+{Example Corp.}
+{New Examples Group -- Innovations Team}
+{\textit{Managers:} Example 1, Example 2}
+{1@example.com, 2@example.com}\\[-0.1in]
+\startresumeitemskillslist
+\item{Took on the role as our group's lead Python architect, mentor and evangelist. Taught classes in collaboration with PSU exploring ideas around data and the Quantified Self, where students built interesting things with Python and Raspberry Pi computers.}
+\item{...}
+\item{...}
+\finishresumeitemskillslist
+\resumeitemshort
+	{Chief Awesome Officer}
+	{2007--2012}
+	{Portland, OR}
+	{Example.com, LLC.}
+	{Co-founder}
+	{CEO: Example Name}
+	{}\\[-0.1in]
+\par
+{\addtolength{\leftskip}{0.25in}\addtolength{\rightskip}{0.25in}
+Developed awesomeness management services \& awesome platforms for scientists.
+\par }
+\end{resumeblock}\vspace{2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{resumeblock}{Academic Experience}
+
+\resumeitemshort
+	{Research Assistant}
+	{2005--2011}
+	{Portland, OR}
+  {Portland State University Department of Computer Science}
+	{Intel Systems \& Networking Laboratory}
+	{Advisors: Dr. Example 1 \& Dr. Example 2}
+	{1@example.com, 2@example.com}\\[-0.1in]
+\par{
+Research: Developing fast online algorithms for optimal piecewise linear data set approximation, using dynamic programming and other optimization techniques. \\
+Other focus: Wireless network simulation with GTNetS \& NS-3, VANET protocol development and simulation with TRANSIMS, and sensor communication protocols for reactive sensing.\\
+Created The Cascades project, an open-source sensor networking framework for the Crossbow Stargate platform (Intel PXA255) with support for communication with TinyOS-based devices. Also worked with other mobile Linux, such as Nokia tablets and smartphones.\\
+\par}
+\end{resumeblock}\vspace*{1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{resumeblock}{Education}
+
+\basicitem
+	{Ph.D. Computer Science Program}
+	{2007--2012}
+	{Portland State University}
+	{Department of Computer Science}
+	{Advisors: ...}
+	{...}\\[-0.15in]
+
+\par
+{\addtolength{\leftskip}{0.25in}\addtolength{\rightskip}{0.25in}
+Online and statistically optimal data stream approximation.\hfill{\textit {\tiny (Completed up to proposal stage)}}\\
+\ispace Delay-tolerant networking and large-scale wireless network simulation.\\[-0.03in]
+\par }
+\end{resumeblock}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumeblock}{Publications}
+
+\pubitem
+	{Towards Optimal Online Approximation of Data Streams}
+	{2011}
+	{Phillip Sitbon, Nirupama Bulusu, Wu-chi Feng}
+	{DCOSS 2011. Barcelona, Spain. IEEE.}
+\pubitem
+	{TTN: A Time-to-Network Approach to Data Reporting in Mobile Ad Hoc Networks}
+	{2010}
+	{Phillip Sitbon, Wu-chi Feng, Nirupama Bulusu}
+	{WoWMoM 2010. Montreal, QC, Canada. IEEE.}
+\pubitem
+	{Urban-Scale Sensing For Science}
+	{2008}
+	{Phillip Sitbon, Nirupama Bulusu, Wu-chi Feng}
+	{AAR-CPS 2008. Washington, DC, USA. IEEE.}
+\pubitem
+	{SenseTK: A Multimodal, Multimedia Sensor Networking Toolkit}
+	{2007}
+	{Phillip Sitbon, Wu-chi Feng, Nirupama Bulusu, Thanh Dang}
+	{MMCN 2007. San Jose, CA, USA. SPIE.}
+\pubitem
+	{Cascades: An Extensible Heterogeneous Sensor Networking Framework}
+	{2006}
+	{Phillip Sitbon, Nirupama Bulusu, Wu-chi Feng}
+	{SenSys 2006. Boulder, CO, USA. ACM.}
+\end{resumeblock}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{resumeblock}{Skills}
+\skillitem{Programming}\vspace{-0.18in}
+\begin{itemize}[nosep,leftmargin=1.2em,label=\tiny{\protect$\bullet$}]
+\item{20 years of extensive experience developing with Python using well-known libraries \& frameworks for web, database, machine learning, networking, graphics, and more.}
+\item{...}
+\end{itemize}\vspace{1em}
+
+\skillitem{Web and Database}\vspace{-0.18in}
+\begin{itemize}[nosep,leftmargin=1.2em,label=\tiny{\protect$\bullet$}]
+\item{...}
+\end{itemize}\vspace{1em}
+
+\skillitem{Open Source Contributions}\vspace{-0.18in}
+\begin{itemize}[nosep,leftmargin=1.2em,label=\tiny{\protect$\bullet$}]
+\item{The Hydraverse Bot: A full-featured crypto tracking Telegram bot \& Python blockchain integration library.}
+\item{Cloudchaser: A 900 MHz RF hardware \& software system with fully open baseband firmware implementation.}
+\item{PyISAPIe: A high-performance Python IIS ISAPI extension. At the time of its creation (2005), was the fastest Python interpreter extension for a Windows server. Inspired early work on WSGI and the Django project.}
+\item{Cascades: An extensible framework for heterogeneous sensor systems.
+Ran on any device that could support a Python interpreter, and included protocols to talk to various sensor devices (often running TinyOS).}
+\item{Python Core: Introduced a performance-increasing change to the global interpreter locking mechanism.}
+\item{NS-3 Network Simulator Core: Created a waypoint-based mobility model in order to simulate objects moving along a predermined path in a simulation, such as vehicles.}
+\item And more, at \url{https://github.com/sitbon}
+\end{itemize}\vspace{1em}
+
+\end{resumeblock}
+
+\vspace*{\fill}
+\par
+\tiny\textit{Created in LaTeX!}
+\end{document}

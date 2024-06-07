@@ -1,0 +1,95 @@
+% Set of commands used by cv.tex
+
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{simplemargins}
+\usepackage{graphicx}
+\setleftmargin{2.0cm}
+\setrightmargin{2.0cm}
+\settopmargin{2.0cm}
+\setbottommargin{2.0cm}
+%\renewcommand\familydefault{\sfdefault}
+
+
+% starting commands
+\newfont{\myfonta}{cmr10 at 8pt}
+\newfont{\myfontb}{cmr10 at 10pt}
+\newfont{\myfontc}{cmr10 at 12pt}
+\newfont{\myfontd}{cmr10 at 14pt}
+
+\newcommand{\largeskip}[0]{\vspace{2.5mm}\\}
+\newcommand{\shortskip}[0]{\vspace{0.4mm}\\}
+
+% small caps
+\newcommand{\smcp}[1]{\sc{\myfonta{#1}}}
+\renewcommand{\textsc}[1]{\smcp{#1}}
+
+\newcommand{\header}[3]{
+\hspace{0cm}
+\begin{tabular}{p{10.75cm}p{6.0cm}} % was 11,6
+{\raggedright {\headline {#1}}
+\\\vspace*{3mm}
+\headline{#2}} 
+& 
+\raggedleft{#3}
+\end{tabular}}
+
+
+\newcommand{\blocktitle}[1]{
+\parbox{\textwidth}{
+	\vspace{2mm}
+	\noindent
+	\textcolor{MidnightBlue}{
+{\myfontd {#1}
+	\vspace*{1mm}
+	\hrule}
+	\vspace*{3mm}
+	\noindent
+} } }
+
+\newcommand{\headline}[1]{{\myfontc{#1}}}
+\newcommand{\setmainfont}[0]{\myfontb}
+
+%%%%%%
+
+%%\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{4cm}p{13cm}}}{\end{tabular}}
+
+%\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{1cm}p{15cm}}}{\end{tabular}}
+\newenvironment{resumeblock}[1]{\blocktitle{#1}}{}
+
+\newenvironment{resumeitemtitle}{}{}
+
+% Title, date, location, place1, place2, advisor, advisor-email, description
+\newcommand{\resumeitem}[8]{
+	{\bfseries #1}\hfill{\bfseries #2}
+  \\*[-1mm]{\scriptsize #4\hfill{#6}}
+	\\*[-2mm]{\scriptsize #5\hfill{#7}}
+	%\\*[-2mm]{\hspace*{\fill \scriptsize \emph{#3}}}
+	\\*[-2mm]{\scriptsize \emph{#3}}
+	%\\\hspace*{2mm}#8\\[4.25mm]
+    \\#8\\[4.25mm]
+}
+
+\newcommand{\resumeitemshort}[8]{
+	{\bfseries #1}\hfill{\bfseries #2}
+  \\*[-1mm]{\scriptsize #4\hfill{#6}}
+	\\*[-2mm]{\scriptsize #5\hfill{#7}}
+	%\\*[-2mm]{\hspace*{\fill \scriptsize \emph{#3}}}
+	\\*[-2mm]{\scriptsize \emph{#3}}\\
+}
+
+
+%%%%%%
+
+\newcommand{\interest}[2]{
+\includegraphics[height=12pt]{#1}
+~\raisebox{1mm}{#2}}
+
+%%%%%%
+
+\newenvironment{interestsblock}[1]
+{\blocktitle{#1}\begin{tabular}{p{10cm}p{10cm}}}
+{\end{tabular}}
+
+\setlength{\parindent}{0mm}
+\pagestyle{empty}
+
